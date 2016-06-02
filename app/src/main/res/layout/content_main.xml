@@ -22,7 +22,7 @@
         <Button
             android:layout_width="155dp"
             android:layout_height="120dp"
-            android:id="@+id/ipa"
+            android:id="@+id/btnIpa"
             android:layout_gravity="left|top"
             android:background="@drawable/ipa"
             android:nestedScrollingEnabled="false"
@@ -31,7 +31,7 @@
         <Button
             android:layout_width="155dp"
             android:layout_height="120dp"
-            android:id="@+id/ips"
+            android:id="@+id/btnIps"
             android:layout_gravity="right|top"
             android:background="@drawable/ips"
             android:onClick="onClick" />
@@ -39,7 +39,7 @@
         <Button
             android:layout_width="155dp"
             android:layout_height="120dp"
-            android:id="@+id/mtk"
+            android:id="@+id/btnMtk"
             android:layout_gravity="left|center_vertical"
             android:background="@drawable/mtk"
             android:onClick="onClick" />
@@ -47,21 +47,21 @@
         <Button
             android:layout_width="155dp"
             android:layout_height="120dp"
-            android:id="@+id/bing"
+            android:id="@+id/btnIng"
             android:layout_gravity="right|center_vertical"
             android:background="@drawable/bing" />
 
         <Button
             android:layout_width="155dp"
             android:layout_height="120dp"
-            android:id="@+id/kimia"
+            android:id="@+id/btnKimia"
             android:layout_gravity="right|bottom"
             android:background="@drawable/kimia" />
 
         <Button
             android:layout_width="155dp"
             android:layout_height="120dp"
-            android:id="@+id/fisika"
+            android:id="@+id/btnFisika"
             android:layout_gravity="left|bottom"
             android:background="@drawable/fsika" />
     </FrameLayout>

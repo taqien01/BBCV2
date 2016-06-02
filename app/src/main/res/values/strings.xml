@@ -5,4 +5,19 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string-array name="pelajaran">
+        <item>Pilih Pelajaran</item>
+        <item>IPA</item>
+        <item>IPS</item>
+        <item>MATEMATIKA</item>
+        <item>B. INGGRIS</item>
+        <item>KIMIA</item>
+        <item>FISIKA</item>
+    </string-array>
+    <string-array name="tingkatan">
+        <item>Pilih TIngkatan</item>
+        <item>SD</item>
+        <item>SMP</item>
+        <item>SMA</item>
+    </string-array>
 </resources>
