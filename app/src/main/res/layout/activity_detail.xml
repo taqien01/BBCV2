@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Nama"
+                android:id="@+id/txtNama"
+                android:layout_below="@+id/imageView3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="25dp" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="260dp"
+                android:id="@+id/imageView3"
+                android:src="@drawable/fadmol"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Tentor"
+                android:id="@+id/txtTingkat"
+                android:layout_below="@+id/txtNama"
+                android:layout_alignLeft="@+id/txtNama"
+                android:layout_alignStart="@+id/txtNama" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Harga"
+                android:id="@+id/txtHarga"
+                android:layout_below="@+id/txtTingkat"
+                android:layout_alignLeft="@+id/txtNama"
+                android:layout_alignStart="@+id/txtNama" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Kontak"
+                android:id="@+id/txtHp"
+                android:layout_below="@+id/txtJam"
+                android:layout_alignLeft="@+id/txtTingkat"
+                android:layout_alignStart="@+id/txtTingkat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Hari"
+                android:id="@+id/txtHari"
+                android:layout_below="@+id/txtHarga"
+                android:layout_alignLeft="@+id/txtHarga"
+                android:layout_alignStart="@+id/txtHarga" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Jam"
+                android:id="@+id/txtJam"
+                android:layout_below="@+id/txtHari"
+                android:layout_alignLeft="@+id/txtHarga"
+                android:layout_alignStart="@+id/txtHarga" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

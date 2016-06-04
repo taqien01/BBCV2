@@ -55,12 +55,12 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        //TextView txtNama = (TextView) findViewById(R.id.txtNama);
-        //String nama = txtNama.getText().toString();
+        TextView txtNama = (TextView) findViewById(R.id.textNama);
+        String nama = txtNama.getText().toString();
 
         if (id == R.id.nav_tambah) {
             Intent pesan = new Intent(getApplicationContext(), TambahJadwal.class);
-            //pesan.putExtra("var1",nama);
+            pesan.putExtra("var1",nama);
             startActivity(pesan);
         } else if (id == R.id.nav_setting) {
 
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity
         ing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pesan.putExtra("var1","INGGRIS");
+                pesan.putExtra("var1","B. INGGRIS");
                 startActivity(pesan);
             }
         });
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity
         fisika.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pesan.putExtra("var1", "fisika");
+                pesan.putExtra("var1", "FISIKA");
                 startActivity(pesan);
             }
         });
