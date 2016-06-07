@@ -13,6 +13,10 @@ import id.ac.unsyiah.elektro.mobile.bbcv2.model.JadwalDB;
 /**
  * Created by taqien01 on 6/2/2016.
  */
+<<<<<<< .merge_file_a06472
+//bbbbbb
+=======
+>>>>>>> .merge_file_a03808
 public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstance){
         super.onCreate(savedInstance);

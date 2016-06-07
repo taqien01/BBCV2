@@ -1,75 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:background="@drawable/side_nav_bar"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp">
+        android:id="@+id/cv"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#ffdcbd"
+        android:layout_margin="5dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView2"
-            android:src="@drawable/uns"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignBottom="@+id/txtTingkatan"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="NAMA"
-            android:id="@+id/txtNama"
-            android:textColor="@android:color/holo_orange_dark"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="5dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="JAM :"
-            android:id="@+id/txtJam"
-            android:layout_below="@+id/txtNama"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="5dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="HARI :"
-            android:id="@+id/txtHari"
-            android:layout_below="@+id/txtJam"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="5dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="TINGKATAN :"
-            android:id="@+id/txtTingkatan"
-            android:layout_below="@+id/txtHari"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_marginBottom="3dp"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
 
-    </RelativeLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:src="@drawable/uns"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/txtTingkatan"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="NAMA"
+                android:id="@+id/txtNama"
+                android:textColor="#cd7415"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignRight="@+id/txtJam"
+                android:layout_alignEnd="@+id/txtJam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="JAM :"
+                android:id="@+id/txtJam"
+                android:layout_below="@+id/txtNama"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:layout_alignRight="@+id/txtHari"
+                android:layout_alignEnd="@+id/txtHari" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="HARI :"
+                android:id="@+id/txtHari"
+                android:layout_below="@+id/txtJam"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/imageView2"
+                android:layout_toStartOf="@+id/imageView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="TINGKATAN :"
+                android:id="@+id/txtTingkatan"
+                android:layout_below="@+id/txtHari"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignRight="@+id/txtHari"
+                android:layout_alignEnd="@+id/txtHari" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
 </LinearLayout>
