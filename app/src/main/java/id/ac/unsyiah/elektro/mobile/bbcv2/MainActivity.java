@@ -64,7 +64,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(pesan);
         } else if (id == R.id.nav_setting) {
 
-        }else if (id == R.id.nav_logout) {
+        }else if (id == R.id.nav_login) {
+            Intent login = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(login);
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

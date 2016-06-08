@@ -18,9 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetailActivity"/>
+        <activity android:name=".DetailActivity" />
         <activity android:name=".ListJadwalActivity"/>
-        <activity android:name=".TambahJadwal"/>
+        <activity android:name=".DaftarActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".TambahJadwal" />
     </application>
 
 </manifest>
