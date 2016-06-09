@@ -1,6 +1,8 @@
 package id.ac.unsyiah.elektro.mobile.bbcv2;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -88,6 +90,7 @@ public class LoginActivity extends AppCompatActivity {
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
 
+
                 // TODO: Implement successful signup logic here
                 // By default we just finish the Activity and log them in automatically
                 this.finish();
@@ -103,7 +106,13 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
+       /* SharedPreferences login =
+                getSharedPreferences("id.ac.unsyiah.elektro.mobile.bbcv2.PREF_BERSAMA", Context.MODE_PRIVATE);
+
+        login.edit().putBoolean("cekLogin", false).apply();
+        */
         finish();
+
     }
 
     public void onLoginFailed() {
