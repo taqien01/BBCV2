@@ -1,139 +1,298 @@
-<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView2"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="#f5f5f5">
 
-    <Spinner
-        android:layout_width="fill_parent"
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinnerPelajaran"
-        android:layout_alignParentTop="true"
+        android:id="@+id/su"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:backgroundTint="#ffffff"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:entries="@array/pelajaran" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="4dp">
 
-    <EditText
-        android:layout_width="fill_parent"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerPelajaran"
+                android:entries="@array/pelajaran"
+                android:layout_below="@+id/textView6"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:ems="10"
+                android:id="@+id/editJam"
+                android:hint="Jam(ex. 08:30)"
+                android:layout_below="@+id/textView8"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Mata Pelajaran"
+                android:id="@+id/textView6"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Jam Mengajar"
+                android:id="@+id/textView8"
+                android:layout_below="@+id/spinnerPelajaran"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="time"
-        android:ems="10"
-        android:id="@+id/editJam"
-        android:layout_below="@+id/spinnerPelajaran"
+        android:id="@+id/sur"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:backgroundTint="#ffffff"
+        android:layout_below="@+id/su"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:hint="Jam Mengajar" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="4dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Hari"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/editJam"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="5dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Senin"
-        android:id="@+id/checkBox"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:checked="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Hari"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/su"
+                android:layout_alignLeft="@+id/su"
+                android:layout_alignStart="@+id/su"
+                android:textSize="18dp" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Selasa"
-        android:id="@+id/checkBox2"
-        android:layout_alignTop="@+id/checkBox"
-        android:layout_toRightOf="@+id/checkBox"
-        android:layout_toEndOf="@+id/checkBox"
-        android:checked="false" />
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Senin"
+                android:id="@+id/checkBox"
+                android:layout_alignParentStart="true"
+                android:checked="false"
+                android:layout_below="@+id/textView2"
+                android:layout_alignLeft="@+id/su" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rabu"
-        android:id="@+id/checkBox3"
-        android:checked="false"
-        android:layout_alignTop="@+id/checkBox2"
-        android:layout_toRightOf="@+id/checkBox2"
-        android:layout_toEndOf="@+id/checkBox2" />
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Selasa"
+                android:id="@+id/checkBox2"
+                android:checked="false"
+                android:layout_above="@+id/checkBox5"
+                android:layout_toRightOf="@+id/checkBox"
+                android:layout_toEndOf="@+id/checkBox" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kamis"
-        android:id="@+id/checkBox4"
-        android:checked="false"
-        android:layout_below="@+id/checkBox"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Rabu"
+                android:id="@+id/checkBox3"
+                android:checked="false"
+                android:layout_alignTop="@+id/checkBox2"
+                android:layout_toRightOf="@+id/checkBox2"
+                android:layout_toEndOf="@+id/checkBox2" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jumat"
-        android:id="@+id/checkBox5"
-        android:checked="false"
-        android:layout_alignTop="@+id/checkBox4"
-        android:layout_toRightOf="@+id/checkBox4"
-        android:layout_toEndOf="@+id/checkBox4" />
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Kamis"
+                android:id="@+id/checkBox4"
+                android:checked="false"
+                android:layout_below="@+id/checkBox2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sabtu"
-        android:id="@+id/checkBox6"
-        android:checked="false"
-        android:layout_alignTop="@+id/checkBox5"
-        android:layout_toRightOf="@+id/checkBox5"
-        android:layout_toEndOf="@+id/checkBox5" />
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Jumat"
+                android:id="@+id/checkBox5"
+                android:checked="false"
+                android:layout_below="@+id/checkBox"
+                android:layout_toRightOf="@+id/checkBox"
+                android:layout_toEndOf="@+id/checkBox" />
 
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/editHarga"
-        android:layout_below="@+id/checkBox4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:hint="Harga (ex. 20.000)"
-        android:layout_marginTop="5dp" />
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Sabtu"
+                android:id="@+id/checkBox6"
+                android:checked="false"
+                android:layout_below="@+id/checkBox3"
+                android:layout_toRightOf="@+id/checkBox2"
+                android:layout_toEndOf="@+id/checkBox2" />
 
-    <Spinner
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnerTingkat"
-        android:layout_below="@+id/editHarga"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="5dp"
-        android:entries="@array/tingkatan" />
 
-    <EditText
-        android:layout_width="fill_parent"
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editHp"
-        android:layout_below="@+id/spinnerTingkat"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="5dp"
-        android:hint="No Hp" />
+        android:id="@+id/surr"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:backgroundTint="#ffffff"
+        android:layout_below="@+id/sur"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="4dp"
+        android:layout_alignLeft="@+id/sur"
+        android:layout_alignStart="@+id/sur">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editHarga"
+                android:hint="Harga (ex. 20.000)"
+                android:layout_below="@+id/textView9"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerTingkat"
+                android:entries="@array/tingkatan"
+                android:layout_below="@+id/textView10"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editHp"
+                android:hint="No Hp"
+                android:layout_below="@+id/textView11"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Harga"
+                android:id="@+id/textView9"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Tingkatan"
+                android:id="@+id/textView10"
+                android:layout_below="@+id/editHarga"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="No.HP"
+                android:id="@+id/textView11"
+                android:layout_below="@+id/spinnerTingkat"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Simpan"
         android:id="@+id/button3"
-        android:layout_below="@+id/editHp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:onClick="clickTambah" />
+        android:onClick="clickTambah"
+        android:backgroundTint="#53c2fe"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/surr"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/surr"
+        android:layout_alignEnd="@+id/surr" />
+
+
+
+
+
 </RelativeLayout>
+    </ScrollView>

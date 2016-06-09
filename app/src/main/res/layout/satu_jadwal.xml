@@ -3,19 +3,20 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#f9f9f9">
 
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/cv"
+        android:id="@+id/su"
         android:layout_gravity="center"
         card_view:cardCornerRadius="5dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:background="#ffdcbd"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:backgroundTint="#ffffff">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,16 +27,14 @@
             android:layout_marginRight="3dp">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:id="@+id/imageView2"
-                android:src="@drawable/uns"
+                android:src="@drawable/user"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:layout_alignBottom="@+id/txtTingkatan"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp" />
+                android:layout_alignBottom="@+id/txtTingkatan" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -56,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="JAM :"
+                android:text="Jam :"
                 android:id="@+id/txtJam"
                 android:layout_below="@+id/txtNama"
                 android:layout_alignParentLeft="true"
@@ -69,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="HARI :"
+                android:text="Hari :"
                 android:id="@+id/txtHari"
                 android:layout_below="@+id/txtJam"
                 android:layout_alignParentLeft="true"
