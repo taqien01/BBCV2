@@ -10,9 +10,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class LoginDB extends SQLiteOpenHelper {
 
     public static final int VERSI_DB = 1;
-    public static final String NAMA_DB = "Bimbel_Daftar";
+    public static final String NAMA_DB = "Bimbel";
 
-    public static final String TABEL_DAFTAR = "Daftar";
+    public static final String TABEL_DAFTAR = "USER";
     public static final String ID_DAFTAR = "_id";
     public static final String NAMA_DAFTAR= "name";
     public static final String EMAIL_DAFTAR = "email";
