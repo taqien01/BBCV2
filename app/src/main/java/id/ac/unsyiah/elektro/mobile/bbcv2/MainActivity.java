@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
             nav_Menu.findItem(R.id.nav_logout).setVisible(false);
         }
         else{
-            nav_Menu.findItem(R.id.nav_Daftar).setVisible(false);
+            //nav_Menu.findItem(R.id.nav_Daftar).setVisible(false);
             nav_Menu.findItem(R.id.nav_login).setVisible(false);
             //img.setImageResource(R.drawable.fadmol);
             //setContentView(img);
@@ -104,24 +104,27 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_setting) {
 
         }else if (id == R.id.nav_login) {
-            Intent login = new Intent(getApplicationContext(), LoginActivity.class);
+            Intent login = new Intent(getApplicationContext(), MainActivityLogin.class);
             startActivity(login);
+
+            login2.edit().putBoolean("cekLogin", false).apply();
+            finish();
 
         }else if (id == R.id.nav_logout) {
             Intent intent = getIntent();
             startActivity(intent);
-            finish();
-            login2.edit().putBoolean("cekLogin", true).apply();
 
-        }else if (id == R.id.nav_Daftar) {
-            Intent intent = getIntent();
-            startActivity(intent);
+            login2.edit().putBoolean("cekLogin", true).apply();
             finish();
-            login2.edit().putBoolean("cekLogin", false).apply();
+        }//else if (id == R.id.nav_Daftar) {
+           // Intent daftar = new Intent(getApplicationContext(), DaftarActivity.class);
+           // startActivity(daftar);
+           // finish();
+           // login2.edit().putBoolean("cekLogin", false).apply();
             //Intent daftar = new Intent(getApplicationContext(), DaftarActivity.class);
             //startActivity(daftar);
 
-        }
+      //  }
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

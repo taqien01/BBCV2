@@ -19,10 +19,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".DetailActivity" />
-        <activity android:name=".ListJadwalActivity"/>
+        <activity android:name=".ListJadwalActivity"
+            android:label="Mata Pelajaran"/>
         <activity android:name=".DaftarActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".TambahJadwal" />
+        <activity android:name=".MainActivityLogin" />
+        <activity android:name=".TambahJadwal"
+            android:label="Tambah Jadwal Pelajaran"/>
+
     </application>
 
 </manifest>
