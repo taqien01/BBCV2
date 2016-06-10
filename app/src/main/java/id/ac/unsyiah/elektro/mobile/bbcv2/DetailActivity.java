@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import id.ac.unsyiah.elektro.mobile.bbcv2.model.JadwalDB;
@@ -14,6 +17,7 @@ import id.ac.unsyiah.elektro.mobile.bbcv2.model.JadwalDB;
  * Created by taqien01 on 6/2/2016.
  */
 public class DetailActivity extends AppCompatActivity {
+    Button call;
     protected void onCreate(Bundle savedInstance){
         super.onCreate(savedInstance);
         setContentView(R.layout.activity_detail);
@@ -66,6 +70,16 @@ public class DetailActivity extends AppCompatActivity {
         TextView txtJam = (TextView) findViewById(R.id.txtJam);
         txtJam.setText("Jam Mengajar : "+jam);
 
+
+
+
+    }
+
+    public  void  call (View view){
+        dialContactPhone(nohp);
+    }
+    private void dialContactPhone(final String phoneNumber) {
+        startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phoneNumber, null)));
     }
 
     private long id;
