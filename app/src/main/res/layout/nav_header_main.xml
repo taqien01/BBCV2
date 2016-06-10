@@ -25,14 +25,14 @@
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textAlignment="center"
-        android:id="@+id/textNama"
-        android:text="AFFF" />
+        android:id="@+id/txtDrawer"
+        android:text="@string/test" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtDrawer2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="test" />
+        android:text="@string/test" />
 
 </LinearLayout>

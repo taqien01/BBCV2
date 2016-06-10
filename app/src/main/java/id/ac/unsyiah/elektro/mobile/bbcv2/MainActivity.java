@@ -1,12 +1,10 @@
 package id.ac.unsyiah.elektro.mobile.bbcv2;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,10 +18,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    LoginDataBaseAdapter loginDataBaseAdapter;
+    NavigationView navigationView;
 
 
     @Override
@@ -32,6 +32,25 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        SharedPreferences login2 =
+                getSharedPreferences("id.ac.unsyiah.elektro.mobile.bbcv2.PREF_BERSAMA", Context.MODE_PRIVATE);
+        userName = login2.getString("user","");
+
+        // create a instance of SQLite Database
+        loginDataBaseAdapter=new LoginDataBaseAdapter(this);
+        loginDataBaseAdapter=loginDataBaseAdapter.open();
+
+        View header = ((NavigationView)findViewById(R.id.nav_view)).getHeaderView(0);
+
+        nama =loginDataBaseAdapter.getSinlgeName(userName);
+
+        TextView txtNama = (TextView) header.findViewById(R.id.txtDrawer);
+        TextView txtEmail = (TextView) header.findViewById(R.id.txtDrawer2);
+        txtNama.setText(nama);
+
+        txtEmail.setText(userName);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -47,6 +66,7 @@ public class MainActivity extends AppCompatActivity
 
     public void checkLogin(){
 
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         Menu nav_Menu = navigationView.getMenu();
         ImageView img = (ImageView) findViewById(R.id.imageView);
@@ -61,15 +81,15 @@ public class MainActivity extends AppCompatActivity
             nav_Menu.findItem(R.id.nav_logout).setVisible(false);
         }
         else{
+
+
+
+
             //nav_Menu.findItem(R.id.nav_Daftar).setVisible(false);
             nav_Menu.findItem(R.id.nav_login).setVisible(false);
+
             //img.setImageResource(R.drawable.fadmol);
             //setContentView(img);
-           // TextView txtNama = (TextView) findViewById(R.id.textNama);
-            //TextView txtEmail = (TextView) findViewById(R.id.textView);
-            //txtNama.setText("avavab");
-            //txtEmail.setText("avava");
-
         }
     }
 
@@ -98,7 +118,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_tambah) {
             Intent pesan = new Intent(getApplicationContext(), TambahJadwal.class);
-            //pesan.putExtra("var1",nama);
+            pesan.putExtra("var1",nama);
             startActivity(pesan);
 
         } else if (id == R.id.nav_setting) {
@@ -106,15 +126,12 @@ public class MainActivity extends AppCompatActivity
         }else if (id == R.id.nav_login) {
             Intent login = new Intent(getApplicationContext(), MainActivityLogin.class);
             startActivity(login);
-
-            login2.edit().putBoolean("cekLogin", false).apply();
             finish();
 
         }else if (id == R.id.nav_logout) {
             Intent intent = getIntent();
             startActivity(intent);
-
-            login2.edit().putBoolean("cekLogin", true).apply();
+            login2.edit().clear().commit();
             finish();
         }//else if (id == R.id.nav_Daftar) {
            // Intent daftar = new Intent(getApplicationContext(), DaftarActivity.class);
@@ -189,4 +206,13 @@ public class MainActivity extends AppCompatActivity
             }
         });
     }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        // Close The Database
+        loginDataBaseAdapter.close();
+    }
+
+  protected String nama = "";
+  protected String userName = "";
 }

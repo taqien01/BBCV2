@@ -78,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Nama"
-                        android:id="@+id/txtNama"/>
+                        android:id="@+id/txtDrawer"/>
 
 
 
@@ -88,7 +88,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Tentor"
                         android:id="@+id/txtTingkat"
-                        android:layout_below="@+id/txtNama"/>
+                        android:layout_below="@+id/txtDrawer"/>
 
                     <TextView
                         android:layout_width="wrap_content"

@@ -28,7 +28,7 @@ import id.ac.unsyiah.elektro.mobile.bbcv2.model.LoginDB;
  */
 public class DaftarActivity extends Activity
 {
-    EditText editTextEmail,editTextPassword,editTextConfirmPassword;
+    EditText editTextNama,editTextEmail,editTextPassword,editTextConfirmPassword;
     Button btnCreateAccount;
 
     LoginDataBaseAdapter loginDataBaseAdapter;
@@ -43,6 +43,7 @@ public class DaftarActivity extends Activity
         loginDataBaseAdapter=loginDataBaseAdapter.open();
 
         // Get Refferences of Views
+        editTextNama = (EditText) findViewById(R.id.editTextNama);
         editTextEmail =(EditText)findViewById(R.id.editTextEmail);
         editTextPassword=(EditText)findViewById(R.id.editTextPassword);
         editTextConfirmPassword=(EditText)findViewById(R.id.editTextConfirmPassword);
@@ -54,6 +55,7 @@ public class DaftarActivity extends Activity
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
+                String nama = editTextNama.getText().toString();
                 String Email= editTextEmail.getText().toString();
                 String password=editTextPassword.getText().toString();
                 String confirmPassword=editTextConfirmPassword.getText().toString();
@@ -75,7 +77,7 @@ public class DaftarActivity extends Activity
                 else
                 {
                     // Save the Data in Database
-                    loginDataBaseAdapter.insertEntry(Email, password);
+                    loginDataBaseAdapter.insertEntry(Email, password, nama);
                     Toast.makeText(getApplicationContext(), "Account Successfully Created ", Toast.LENGTH_LONG).show();
                     Intent daftar=new Intent(getApplicationContext(),MainActivityLogin.class);
                     startActivity(daftar);
