@@ -13,7 +13,7 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <ImageView android:src="@mipmap/ic_launcher"
+        <ImageView android:src="@drawable/biru"
             android:layout_width="wrap_content"
             android:layout_height="72dp"
             android:layout_marginBottom="24dp"
@@ -80,7 +80,9 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:padding="12dp"
-            android:text="Create Account"/>
+            android:text="Create Account"
+            android:backgroundTint="#2ea7f8"
+            android:textColor="#ffffff" />
 
         <TextView android:id="@+id/link_login"
             android:layout_width="fill_parent"
