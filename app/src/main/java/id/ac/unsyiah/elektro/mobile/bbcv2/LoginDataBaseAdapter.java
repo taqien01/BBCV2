@@ -14,7 +14,7 @@ public class LoginDataBaseAdapter
     // TODO: Create public field for each column in your table.
     // SQL Statement to create a new database.
     static final String DATABASE_CREATE = "create table "+"LOGIN"+
-            "( " +"ID"+" integer primary key autoincrement,"+ "USERNAME  text,PASSWORD text); ";
+            "( " +"ID"+" integer primary key autoincrement,"+ "NAMA text,USERNAME  text,PASSWORD text); ";
     // Variable to hold the database instance
     public SQLiteDatabase db;
     // Context of the application using the database.
@@ -41,10 +41,11 @@ public class LoginDataBaseAdapter
         return db;
     }
 
-    public void insertEntry(String email, String password)
+    public void insertEntry(String email, String password, String nama)
     {
         ContentValues newValues = new ContentValues();
         // Assign values for each row.
+        newValues.put("NAMA", nama);
         newValues.put("USERNAME", email);
         newValues.put("PASSWORD",password);
 
@@ -60,6 +61,7 @@ public class LoginDataBaseAdapter
         // Toast.makeText(context, "Number fo Entry Deleted Successfully : "+numberOFEntriesDeleted, Toast.LENGTH_LONG).show();
         return numberOFEntriesDeleted;
     }
+
     public String getSinlgeEntry(String email)
     {
         Cursor cursor=db.query("LOGIN", null, " USERNAME=?", new String[]{email}, null, null, null);
@@ -73,11 +75,27 @@ public class LoginDataBaseAdapter
         cursor.close();
         return password;
     }
-    public void  updateEntry(String email, String password)
+
+    public String getSinlgeName(String email)
+    {
+        Cursor cursor=db.query("LOGIN", null, " USERNAME=?", new String[]{email}, null, null, null);
+        if(cursor.getCount()<1) // UserName Not Exist
+        {
+            cursor.close();
+            return "NOT EXIST";
+        }
+        cursor.moveToFirst();
+        String nama= cursor.getString(cursor.getColumnIndex("NAMA"));
+        cursor.close();
+        return nama;
+    }
+
+    public void  updateEntry(String email, String password, String nama)
     {
         // Define the updated row content.
         ContentValues updatedValues = new ContentValues();
         // Assign values for each row.
+        updatedValues.put("NAMA", nama);
         updatedValues.put("USERNAME", email);
         updatedValues.put("PASSWORD",password);
 

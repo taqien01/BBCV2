@@ -48,7 +48,7 @@ public class DetailActivity extends AppCompatActivity {
         cursor.close();
         db.close();
 
-        TextView txtNama = (TextView) findViewById(R.id.txtNama);
+        TextView txtNama = (TextView) findViewById(R.id.txtDrawer);
         txtNama.setText(nama);
 
         TextView txtTingkat = (TextView) findViewById(R.id.txtTingkat);
@@ -57,8 +57,8 @@ public class DetailActivity extends AppCompatActivity {
         TextView txtHarga = (TextView) findViewById(R.id.txtHarga);
         txtHarga.setText("Harga : Rp. "+harga);
 
-        TextView txtHp = (TextView) findViewById(R.id.txtHp);
-        txtHp.setText("Kontak : "+nohp);
+        TextView txtHp = (TextView) findViewById(R.id.txtKontak);
+        txtHp.setText(nohp);
 
         TextView txtHari = (TextView) findViewById(R.id.txtHari);
         txtHari.setText("Hari Mengajar : "+hari);

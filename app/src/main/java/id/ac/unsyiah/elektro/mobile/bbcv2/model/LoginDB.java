@@ -28,8 +28,7 @@ public class LoginDB extends SQLiteOpenHelper {
                 + ID_DAFTAR + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + NAMA_DAFTAR +" TEXT, "
                 + EMAIL_DAFTAR +" TEXT, "
-                + PASSWORD_DAFTAR +" PASSWORD, "
-
+                + PASSWORD_DAFTAR +" PASSWORD "
                 + ");";
         db.execSQL(baruDB);
     }

@@ -25,7 +25,7 @@ public class JadwalCursorAdapter extends CursorAdapter {
 
     public void bindView(View view, Context context, Cursor cursor){
         String nama = cursor.getString(cursor.getColumnIndexOrThrow(JadwalDB.NAMA_PENGAJAR));
-        TextView txtNama = (TextView) view.findViewById(R.id.txtNama);
+        TextView txtNama = (TextView) view.findViewById(R.id.txtDrawer);
         txtNama.setText(nama);
 
         String jam = cursor.getString(cursor.getColumnIndexOrThrow(JadwalDB.JAM_PELAJARAN));
