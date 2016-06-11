@@ -124,15 +124,16 @@
                         android:layout_alignLeft="@+id/txtHarga"
                         android:layout_alignStart="@+id/txtHarga" />
 
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Call"
+
+                    <ImageButton
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:id="@+id/button10"
                         android:onClick="call"
-                        android:layout_marginTop="171dp"
-                        android:layout_centerHorizontal="true" />
-
+                        android:src="@drawable/call"
+                        android:layout_alignTop="@+id/txtHarga"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
 
 
                 </RelativeLayout>
